@@ -6,20 +6,25 @@ import domain.Cliente;
 
 public class ClienteService implements IClienteService {
 	
-	private IClienteDAO clienteDAO;
+	private IClienteDAO clienteDao;
 	
 	public ClienteService(IClienteDAO clienteDAO) {
-		this.clienteDAO = clienteDAO;		
+		this.clienteDao = clienteDAO;		
 	}
 
 	@Override
-	public void salvar(Cliente cliente) {
-		clienteDAO.salvar(cliente);
+	public Boolean salvar(Cliente cliente) {
+		return clienteDao.salvar(cliente);
 	}
 	
 	@Override
 	public Cliente buscarPorCpf (Long cpf) {
-		return clienteDAO.buscarPorCpf(cpf);
+		return clienteDao.buscarPorCpf(cpf);
+	}
+
+	@Override
+	public void excluir(Long cpf) {
+		//clienteDAO.excluir(cpf);
 	}
 }
     
