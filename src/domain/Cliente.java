@@ -1,7 +1,5 @@
 package domain;
 
-import java.util.Objects;
-
 public class Cliente {
     private String nome;
     private Long cpf;
@@ -10,52 +8,48 @@ public class Cliente {
     private Integer numero;
     private String cidade;
     private String estado;
-
-    public Cliente() {}
-
-    public Cliente(String nome, Long cpf) {
+    
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+    public Long getCpf() {
+        return cpf;
+    }
+    public void setCpf(Long cpf) {
         this.cpf = cpf;
     }
-
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
-    public Long getCpf() { return cpf; }
-    public void setCpf(Long cpf) { this.cpf = cpf; }
-    public Long getTel() { return tel; }
-    public void setTel(Long tel) { this.tel = tel; }
-    public String getEnd() { return end; }
-    public void setEnd(String end) { this.end = end; }
-    public Integer getNumero() { return numero; }
-    public void setNumero(Integer numero) { this.numero = numero; }
-    public String getCidade() { return cidade; }
-    public void setCidade(String cidade) { this.cidade = cidade; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", cpf=" + cpf +
-                ", tel=" + tel +
-                ", end='" + end + '\'' +
-                ", numero=" + numero +
-                ", cidade='" + cidade + '\'' +
-                ", estado='" + estado + '\'' +
-                '}';
+    public Long getTel() {
+        return tel;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Cliente)) return false;
-        Cliente cliente = (Cliente) o;
-        return Objects.equals(cpf, cliente.cpf);
+    public void setTel(Long tel) {
+        this.tel = tel;
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(cpf);
+    public String getEnd() {
+        return end;
+    }
+    public void setEnd(String end) {
+        this.end = end;
+    }
+    public Integer getNumero() {
+        return numero;
+    }
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+    public String getCidade() {
+        return cidade;
+    }
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    public String getEstado() {
+        return estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }
